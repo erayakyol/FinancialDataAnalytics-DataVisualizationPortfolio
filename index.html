@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leveraged home-equity return explorer — Eray AKYOL, Data Visualization portfolio, task 13</title>
+<title>Leveraged home-equity return explorer (Eray AKYOL, Data Visualization portfolio, task 13)</title>
 <!-- Plotly.js, pinned version, the only external resource. All data is embedded below. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.5.1/plotly.min.js"></script>
 <style>
@@ -243,7 +243,7 @@
       "In <span class='" + span + "'>" + name + "</span>, a " + year + " buyer with " + ltv + " % loan-to-value has " +
       (lev >= 0 ? "multiplied the down payment by " + fmt(lev) + " (" + pct(lev - 1) + ")"
                 : "lost the whole down payment (levered multiple " + fmt(lev) + "×)") +
-      " — a cash buyer by " + fmt(unl) + " (" + pct(unl - 1) + ")";
+      "; a cash buyer by " + fmt(unl) + " (" + pct(unl - 1) + ")";
     document.getElementById("subtitle").textContent =
       "Real house prices (BIS index, 2010 = 100, quarterly), " + year + " Q1 to " + last +
       ", interest-only mortgage at a constant " + rate.toFixed(2) + " % per year; no taxes, no amortisation, no rent saved. " +
@@ -270,7 +270,7 @@
       return BIS[c].name + " " + fmt(v) + "×" + (neg ? " (negative equity in " + neg + " quarters)" : "");
     });
     document.getElementById("hypothesis").textContent =
-      "Hypothesis C, leverage on Swiss housing pays: same purchase year, loan-to-value and rate, levered multiple today — " +
+      "Hypothesis C, leverage on Swiss housing pays: same purchase year, loan-to-value and rate, levered multiple today: " +
       parts.join("; ") + ". Try purchase year 2007 or 2008 for Italy and Spain.";
 
     document.getElementById("source").innerHTML =
